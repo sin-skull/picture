@@ -1,0 +1,157 @@
+        /* 全体の設定 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: linear-gradient(45deg, #ffa4a4, #6a5acd, #00bcd4, #ffb71b);
+            overflow: hidden;
+            position: relative;
+            z-index: -1; /* アイコンより後ろに配置 */
+        }
+        @keyframes twinkle {
+            0% {
+                opacity: 0.3;
+                box-shadow: 0 0 10px rgb(255, 255, 255);
+            }
+            50% {
+                opacity: 1;
+                box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+            }
+            100% {
+                opacity: 0.3;
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            }
+        }
+
+        /* 星がゆっくり動くアニメーション */
+        @keyframes moveStars {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(-100px, -100px);
+            }
+        }
+
+        /* 星空を最背面に配置 */
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 2s infinite, moveStars 10s linear infinite;
+            opacity: 0.8;
+            z-index: -1; /* アイコンより後ろに配置 */
+        }
+
+        /* 星が点滅するアニメーション */
+        @keyframes twinkle {
+            0% {
+                opacity: 0.5;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.5;
+            }
+        }
+
+        /* 星がゆっくり動くアニメーション */
+        @keyframes moveStars {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(-100px, -100px);
+            }
+        }
+
+
+button {
+    padding: 20px;
+    margin: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: transform 0.25s ease-in-out;
+    
+}
+button:hover {
+    transform: scale(1.1); /* ボタンをホバー時に少し拡大 */
+}
+button img {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+
+}
+.popup {
+    display: none; /* 初期状態で非表示 */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffcc00; /* 任天堂の黄色 */
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 300px;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    animation: popupAnimation 0.5s ease-in-out;
+}
+
+/* ポップアップタイトル */
+.popup h2 {
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    color: #1d3557;
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 22px;
+}
+
+/* ポップアップメッセージ */
+.popup p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* ポップアップボタン */
+.popup button {
+    background-color: #ff6f00; /* 任天堂っぽいオレンジ色 */
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* ボタンホバー時 */
+.popup button:hover {
+    background-color: #d04a00;
+}
+
+/* ボタンフォーカス時 */
+.popup button:focus {
+    outline: none;
+}
+
+/* ポップアップ表示アニメーション */
+@keyframes popupAnimation {
+    0% {
+        transform: translate(-50%, -60%) scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}

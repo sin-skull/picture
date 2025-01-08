@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>リズムゲーム</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+    <button id="m">M</button>
+    <div id="game-screen" class="game-screen"><!--ゲームスクリーンのコンテンツ-->
+        <div id="ready-text" class="ready-text">Are you ready?</div>
+        <div id="result" class="result hidden"></div>
+    </div>
+
+    <div id="menu" class="hidden">
+        <h2>メニュー</h2>
+        <button id="resume">ゲームを再開</button>
+        <button id="restart">リスタート</button>
+        <button id="exit">終了</button>
+    </div>
+    
+   <!--
+     <div id="game-buttons">
+        <button id="a-button">A</button>
+        <button id="b-button">B</button>
+        <button id="menu-button">メニュー</button>
+        <div id="arrow-buttons">
+            <button id="up-arrow">↑</button>
+            <button id="down-arrow">↓</button>
+            <button id="left-arrow">←</button>
+            <button id="right-arrow">→</button>
+        </div>
+    </div>
+    -->
+    <div id="result" class="hidden">
+        <div id="score"></div>
+        <div id="message"></div>
+    </div>
+    
+    <script src="music.js"></script>
+    <script src="1.js"></script>
+</body>
+</html>

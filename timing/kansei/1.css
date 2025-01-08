@@ -1,0 +1,91 @@
+body {
+    background-color: #342f41; /* 背景色を黒に設定 */
+  overflow: hidden; /* スクロールを防止 */ 
+  text-align: center;
+}
+   
+.game-screen {
+  width: 95vw;
+  height: 50vw;
+  margin: 0px auto 0px ;
+  background-color: #111; /* 画面の背景（暗い黒） */
+  border-radius: 20px; /* 画面の角を少し丸める */
+  border: solid 1vw #000000;
+  overflow: hidden; /* コンテンツのはみ出しを隠す */
+  justify-content: center;
+  align-items: center;
+    
+}
+
+.ready-text {
+    font-size: 5vw;
+    color: #fff;
+    text-align: center;
+    padding: 20vw;
+}
+
+.result {
+    font-size: 2em;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hidden {
+    display: none;
+}
+
+#m {
+    
+    top: 50%;
+    left: 50%;
+}
+
+#menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    text-align: center;
+}
+
+#menu button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+/*
+#menu button:hover {
+    background-color: #555;
+}
+
+#a-button {
+    font-size: 50px;
+  width: 100px;
+  height: 100px;
+  background: #8b1313;
+  border-radius: 50%;
+
+}
+
+#b-button {
+  font-size: 50px;
+width: 100px;
+height: 100px;
+background: #3a3d9a;
+border-radius: 50%;
+}
+
+*/

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポップアップ表示</title>
+    <link rel="stylesheet" href="22.css">
+</head>
+<body>
+
+<!-- 動的にボタンが追加されるコンテナ -->
+<div id="buttonContainer"></div>
+
+<!-- ポップアップ -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <h2></h2> <!-- タイトルを表示 -->
+        <p></p> <!-- 説明文を表示 -->
+        <div class="popup-buttons">
+            <button id="cancelButton" class="cancel">キャンセル</button>
+            <button id="playButton" class="play">プレイ</button>
+        </div>
+    </div>
+</div>
+
+<script src="22.js"></script>
+</body>
+</html>
