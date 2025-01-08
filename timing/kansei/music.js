@@ -17,11 +17,11 @@ const songsData = {
             retry: { min: 0, text: 'Retry「練習は本番。本番は練習。」' }
         },
         images: {
-            Excellent: 'flower.jpg',
-            Good: 'flower2.jpg',
-            Average: 'flower3.png',
-            Miss: 'images/miss.png',
-            Rongai: 'igood_timing'
+            Excellent: 'https://sin-skull.github.io/picture/timing/kansei/flower.jpg',
+            Good: 'https://sin-skull.github.io/picture/timing/kansei/flower2.jpg',
+            Average: 'https://sin-skull.github.io/picture/timing/kansei/flower3.jng',
+            Miss: 'https://sin-skull.github.io/picture/timing/kansei/miss.jpg',
+            Rongai: 'https://sin-skull.github.io/picture/timing/kansei/igood_timing.jpg'
         }
     }
 };
