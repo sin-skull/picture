@@ -1,4 +1,5 @@
-const songsData = {
+
+        const songsData = {
     song1: {
         file: 'https://sin-skull.github.io/picture/wave/song1.mp3',
         bpm: 110,
@@ -17,12 +18,11 @@ const songsData = {
             retry: { min: 0, text: 'Retry「練習は本番。本番は練習。」' }
         },
         images: {
-            Excellent: 'https://sin-skull.github.io/picture/timing/kansei/flower.jpg',
-            Good: 'https://sin-skull.github.io/picture/timing/kansei/flower2.jpg',
-            Average: 'https://sin-skull.github.io/picture/timing/kansei/flower3.jng',
+            Excellent: 'https://sin-skull.github.io/picture/timing/kansei/Flower.jpg',
+            Good: 'https://sin-skull.github.io/picture/timing/kansei/Flower2.jpg',
+            Average: 'https://sin-skull.github.io/picture/timing/kansei/Flower3.jpg',
             Miss: 'https://sin-skull.github.io/picture/timing/kansei/miss.jpg',
-            Rongai: 'https://sin-skull.github.io/picture/timing/kansei/igood_timing.jpg'
+            Rongai: 'https://sin-skull.github.io/picture/timing/kansei/good_timing.jpg'
         }
     }
 };
- 
