@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Audio API 音楽再生</title>
+</head>
+<body>
+  <h1>Web Audio APIで音楽を再生</h1>
+  <button id="playButton" disabled>音楽を再生</button>
+  <p id="status">音声データをロード中...</p>
+
+  <script>
+    let audioBuffer; // 音声データを保持
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+    // 音声ファイルをロードしてデコード
+    fetch('https://sin-skull.github.io/picture//wave/song1.mp3')
+      .then(response => {
+        if (!response.ok) throw new Error('音声ファイルの取得に失敗しました');
+        return response.arrayBuffer();
+      })
+      .then(data => audioContext.decodeAudioData(data))
+      .then(buffer => {
+        audioBuffer = buffer; // デコードされたデータを保存
+        document.getElementById('status').innerText = '音声データのロードが完了しました';
+        document.getElementById('playButton').disabled = false; // 再生ボタンを有効化
+      })
+      .catch(error => {
+        console.error('エラー:', error);
+        document.getElementById('status').innerText = '音声データのロードに失敗しました';
+      });
+
+    // 音声を再生する関数
+    function playAudio() {
+      if (audioBuffer) {
+        const source = audioContext.createBufferSource(); // 音声ソースを作成
+        source.buffer = audioBuffer; // ロードした音声データをセット
+        source.connect(audioContext.destination); // 出力先を設定
+        source.start(0); // 再生開始
+      }
+    }
+
+    // ボタンに再生イベントを設定
+    document.getElementById('playButton').addEventListener('click', playAudio);
+  </script>
+</body>
+</html>
